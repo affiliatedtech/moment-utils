@@ -1,6 +1,6 @@
 {
   "name": "@affiliatedtech/moment-utils",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Moment.js utility functions",
   "main": "moment-utils.js",
   "scripts": {
