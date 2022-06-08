@@ -34,7 +34,14 @@ function split_dt(dt) {
     };
 }
 
+function concat_dt(date_string, time_string) {
+    const date_time = moment(`${date_string} ${time_string}`);
+
+    return format_sql_dt(date_time);
+}
+
 module.exports = {
+    concat_dt,
     get_base_hour,
     get_time_diff,
     format_sql_dt,

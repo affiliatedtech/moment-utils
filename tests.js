@@ -6,6 +6,7 @@ const {
     get_time_diff,
     format_sql_dt,
     split_dt,
+    concat_dt,
 } = require('./moment-utils');
 
 tap.test('Get base hour', async (t) => {
@@ -39,4 +40,13 @@ tap.test('Split date time', async (t) => {
 
     t.equal(date, '2020-01-29');
     t.equal(time, '00:00:01');
+});
+
+tap.test('Concat date time', async (t) => {
+    const date = '2020-01-29';
+    const time = '00:00:01';
+
+    const date_time = concat_dt(date, time);
+
+    t.equal(date_time, '2020-01-29 00:00:01');
 });
