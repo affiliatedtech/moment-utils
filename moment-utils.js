@@ -25,8 +25,18 @@ function format_sql_dt(dt) {
     return date_time.format('YYYY-MM-DD HH:mm:ss');
 }
 
+function split_dt(dt) {
+    const date_time = moment(dt);
+
+    return {
+        date: date_time.format('YYYY-MM-DD'),
+        time: date_time.format('HH:mm:ss'),
+    };
+}
+
 module.exports = {
     get_base_hour,
     get_time_diff,
     format_sql_dt,
+    split_dt,
 };
